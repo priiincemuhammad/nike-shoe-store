@@ -55,22 +55,28 @@ const Header = () => {
 
         <div className="flex justify-center items-center">
           {/* favorite icon */}
-          <div className="w-10 md:w-12 h-10 md:h-12 ml-3 flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer relative">
+          <Link
+            href={"/"}
+            className="w-10 md:w-12 h-10 md:h-12 ml-3 flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer relative"
+          >
             <IoMdHeartEmpty className="text-[20px] md:text-[25px]" />
             <span className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-[10px] md:text-[12px] px-[2px] md:px-[5px] items-center flex justify-center text-white">
               24
             </span>
-          </div>
+          </Link>
           {/* cart icon */}
-          <div className="w-10 md:w-12 h-10 md:h-12 ml-3 flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer relative">
+          <Link
+            href={"/cart"}
+            className="w-10 md:w-12 h-10 md:h-12 ml-3 flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer relative"
+          >
             <BsCart className="text-[20px] md:text-[25px]" />
             <span className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7 text-[10px] md:text-[12px] px-[2px] md:px-[5px] items-center flex justify-center text-white">
               10
             </span>
-          </div>
+          </Link>
           {/* menu icons */}
           <div
-            className="w-10 md:w-12 h-10 md:h-12 ml-3 flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer"
+            className="md:hidden w-10 md:w-12 h-10 md:h-12 ml-3  flex justify-center items-center rounded-full hover:bg-black/[0.05] cursor-pointer"
             onClick={() => setMobilemenu(!mobileMenu)}
           >
             {mobileMenu ? (
